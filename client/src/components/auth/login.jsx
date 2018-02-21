@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import * as userService from "../../services/user";
 import { Redirect } from "react-router-dom";
 import IndeterminateProgress from "../utilities/indeterminateProgress";
+import { Link } from "react-router-dom";
 
 const butStyle = {
   color: "rgb(204, 77, 3)"
@@ -99,6 +100,14 @@ class Login extends Component {
             className="btn btn-light mt-3 justify-content-center"
             style={butStyle}
           />
+          <br />
+          <Link
+            to="/newuser"
+            className="btn btn-light mt-3 justify-content-center"
+            style={butStyle}
+          >
+            Create New User
+          </Link>
         </form>
       </Fragment>
     );

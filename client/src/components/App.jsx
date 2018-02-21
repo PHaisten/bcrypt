@@ -7,6 +7,7 @@ import NavBar from "./NavBar";
 import Details from "./Details";
 import UpdateBlog from "./UpdateBlog";
 import Contact from "./Contact";
+import CreateUser from "./CreateUser";
 
 import PrivateRoute from "./auth/privateRoute";
 import Login from "./auth/login";
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/logout" component={Logout} />
             <Route exact path="/blogs" component={Blogs} />
             <Route path="/contact" component={Contact} />
+            <Route path="/newuser" component={CreateUser} />
             <PrivateRoute exact path="/post" component={BlogInput} />
             <Route exact path="/blogs/:id" component={Details} />
             <PrivateRoute exact path="/update/:id" component={UpdateBlog} />
