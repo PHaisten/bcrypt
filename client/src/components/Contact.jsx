@@ -33,25 +33,12 @@ class Contact extends Component {
 		this.setState({ message });
 	}
 
-	// handleSubmit(e) {
-	// 	e.preventDefualt();
-	// 	console.log('got here');
-	// 	sendContactEmail(this.state.name, this.state.email, this.state.message)
-	// 		.then(() => {
-	// 			// Redirect to the homepage
-	// 			// this.props.history.replace("/");
-	// 			console.log('sent');
-	// 		})
-	// 		.catch(err => {
-	// 			console.log(err);
-	// 		});
-	// }
 	handleSubmit() {
 		console.log('got here');
 		sendContactEmail(this.state.name, this.state.email, this.state.message)
 			.then(() => {
 				// Redirect to the homepage
-				// this.props.history.replace("/");
+				this.props.history.replace('/');
 				console.log('sent');
 			})
 			.catch(err => {
@@ -61,10 +48,6 @@ class Contact extends Component {
 
 	render() {
 		return (
-			// <form
-			// 	className="card d-flex-container w-50 mx-auto mt-3"
-			// 	onSubmit={e => this.handleSubmit(e)}
-			// >
 			<div className="card d-flex-container w-50 mx-auto mt-3">
 				<div className="card-body my-3 py-3">
 					<div className="form-group">
@@ -102,13 +85,9 @@ class Contact extends Component {
 							className="form-control"
 						/>
 					</div>
-					{/* <input
-						type="submit"
-						className="btn btn-light mt-3 justify-content-center"
-						style={submitStyle}
-          /> */}
 					<button
 						className="btn btn-light mt-3 justify-content-center"
+						style={submitStyle}
 						onClick={() => {
 							this.handleSubmit();
 						}}
@@ -117,7 +96,6 @@ class Contact extends Component {
 					</button>
 				</div>
 			</div>
-			// </form>
 		);
 	}
 }
