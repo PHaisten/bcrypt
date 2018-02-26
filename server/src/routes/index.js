@@ -10,12 +10,12 @@ let router = Router();
 router.use('/auth', authRouter);
 router.use('/contact', contactRouter);
 
-router
-	.route('*')
-	.post(tokenMiddleware, isLoggedIn)
-	.put(tokenMiddleware, isLoggedIn)
-	.delete(tokenMiddleware, isLoggedIn)
-	.get(tokenMiddleware, isLoggedIn);
+// router
+// 	.route('*')
+// 	.post(tokenMiddleware, isLoggedIn)
+// 	.put(tokenMiddleware, isLoggedIn)
+// 	.delete(tokenMiddleware, isLoggedIn)
+// 	.get(tokenMiddleware, isLoggedIn);
 
 router.use('/blog', blogsRouter);
 router.use('/users', usersRouter);
